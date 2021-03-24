@@ -1,0 +1,33 @@
+Tasks:
+1. Featurization / Preprocessing
+  - Construct meaningful variable from date and text
+  - Binning continuous data or merging bins in categorical data
+2. Exploratory Data Analysis (EDA): 
+  - A summary to show the data types of each variable (including outcome variable)
+  - A correlation plot to show how (continuous) predictors are correlated, aiming to identify highly correlated variables and their comovements
+  - A distribution plot to show distributions of each variable, aiming to identify imbalanced/empty count in categorical variable and skewness in continuous variable
+  - Quantity-Categorical analysis
+  - Clustering methods 
+  - Low dimensional embedding
+3. Train-Validation split
+  - 70:30
+4. Missing data (on train data only)
+5. Extreme observations / outliers (on train data only)
+  - Isolation forest
+  - One-Class SVM
+  - Robust Kernel-based outlier factor (RKOF)
+6. Proposed algorithms
+  - Extreme gradient boosting
+  - Random forest
+  - Support vector machine
+  - Logistic regression with class imbalanced techniques
+7. Performance evaluation
+  - Choose hyperparameters for each model
+  - Evaluate performances on test set
+  - Discussion on interpretability of models
+  - Discussion on assumption of models
+  
+Remark 1: Wrap 4 - 6 in a pipeline in a separate python file after hyperparameters are validated
+Remark 2: Do step 1 in a separate jupyter notebook
+Remark 3: Do step 2 in another separate jupyter notebook
+Remark 4: Write analysis and findings on jupyter notebooks directly. Later we put all together into a single PDF using Latex.
