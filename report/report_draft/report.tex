@@ -55,8 +55,22 @@
 \section*{Assignment 1}
 \addcontentsline{toc}{section}{Assignment 1}
 
+
 \subsection*{Feature engineering}
 \addcontentsline{toc}{subsection}{Feature engineering}
+
+The dataset for Assignment 1 consists of 55463 observations and 78 features. The number of features. It is easy to observe that there are a lot of missing values and categorical or date features in the dataset. In this section, we would discuss the strategies used in handling such problems. 
+
+\subsubsection*{Missing values}
+\addcontentsline{toc}{subsubsection}{Missing values}
+
+As shown in figure 1, there are 55 feature which contain missing values, and 24 out of them contain more than 80\% of missing values. For those features with a high proportion of missing values (more than 50\%), missing values are treated as an extra category. By treating missing values as an extra category, the information of the non-missing entries of those features can be retained and learnt by the model, whereas removal of those features may lead to a loss in information or pattern.  
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\linewidth]{missing_value_plt1}
+\caption{Proportions of missing values for each feature}
+\end{figure}
 
 \subsection*{Exploratory data analysis}
 \addcontentsline{toc}{subsection}{Exploratory data analysis}

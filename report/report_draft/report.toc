@@ -1,0 +1,10 @@
+\contentsline {section}{Assignment 1}{2}{}%
+\contentsline {subsection}{Feature engineering}{2}{}%
+\contentsline {subsubsection}{Missing values}{2}{}%
+\contentsline {subsection}{Exploratory data analysis}{3}{}%
+\contentsline {subsection}{Model building}{3}{}%
+\contentsline {subsection}{Interpretation}{3}{}%
+\contentsline {subsection}{Reflection}{3}{}%
+\contentsline {section}{Assignment 2}{3}{}%
+\contentsline {section}{Assignment 3}{3}{}%
+\contentsline {section}{Assignment 4}{3}{}%
