@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.11.4)  28 APR 2021 01:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.11.4)  29 APR 2021 03:47
 entering extended mode
 **./report.tex
 (report.tex
@@ -306,22 +306,83 @@ Package pdftex.def Info: C:/Users/user/Desktop/KUL - Mstat/Big Data Platforms a
 nd Technologies/report/graph/missing_value_plt1.png  used on input line 71.
 (pdftex.def)             Requested size: 483.69684pt x 409.64006pt.
  [2 <C:/Users/user/Desktop/KUL - Mstat/Big Data Platforms and Technologies/repo
-rt/graph/missing_value_plt1.png>] [3] (report.aux) ) 
+rt/graph/missing_value_plt1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Overfull \hbox (13.2407pt too wide) in paragraph at lines 82--83
+\OT1/cmr/m/n/12 fea-tures. They are \OT1/cmtt/m/n/12 policy[]holder[]year[]birt
+h\OT1/cmr/m/n/12 , \OT1/cmtt/m/n/12 driver[]year[]birth\OT1/cmr/m/n/12 , \OT1/c
+mtt/m/n/12 third[]party[]1[]year[]birth\OT1/cmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (5.15807pt too wide) in paragraph at lines 82--83
+\OT1/cmtt/m/n/12 third[]party[]2[]year[]birth\OT1/cmr/m/n/12 , \OT1/cmtt/m/n/12
+ third[]party[]3[]year[]birth \OT1/cmr/m/n/12 and \OT1/cmtt/m/n/12 repair[]year
+[]birth \OT1/cmr/m/n/12 in the dataset.
+ []
+
+
+Underfull \hbox (badness 1038) in paragraph at lines 89--90
+[]|\OT1/cmr/m/n/12 The num-ber of days be-tween \OT1/cmtt/m/n/12 claim[]date[]r
+egistered \OT1/cmr/m/n/12 and
+ []
+
+
+Underfull \hbox (badness 5302) in paragraph at lines 91--92
+[]|\OT1/cmr/m/n/12 The num-ber of days be-tween \OT1/cmtt/m/n/12 claim[]date[]o
+ccured \OT1/cmr/m/n/12 and
+ []
+
+
+Overfull \hbox (1.1019pt too wide) in paragraph at lines 85--98
+[][] 
+ []
+
+
+Overfull \hbox (35.56161pt too wide) in paragraph at lines 105--106
+\OT1/cmr/m/n/12 am-ple, the in-stance with claim id 62780 has an in-valid value
+ for the year of \OT1/cmtt/m/n/12 claim[]vehicle[]date[]inuse\OT1/cmr/m/n/12 .
+ []
+
+<C:/Users/user/Desktop/KUL - Mstat/Big Data Platforms and Technologies/report/g
+raph/data_quality_issue.png, id=19, 440.24475pt x 120.45pt>
+File: C:/Users/user/Desktop/KUL - Mstat/Big Data Platforms and Technologies/rep
+ort/graph/data_quality_issue.png Graphic file (type png)
+<use C:/Users/user/Desktop/KUL - Mstat/Big Data Platforms and Technologies/repo
+rt/graph/data_quality_issue.png>
+Package pdftex.def Info: C:/Users/user/Desktop/KUL - Mstat/Big Data Platforms a
+nd Technologies/report/graph/data_quality_issue.png  used on input line 109.
+(pdftex.def)             Requested size: 483.69684pt x 132.34468pt.
+[3
+
+ <C:/Users/user/Desktop/KUL - Mstat/Big Data Platforms and Technologies/report/
+graph/data_quality_issue.png>] [4] [5
+
+] [6
+
+] [7
+
+] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 4004 strings out of 480224
- 64296 string characters out of 2880578
- 341277 words of memory out of 3000000
- 20541 multiletter control sequences out of 15000+200000
- 541251 words of font info for 52 fonts, out of 3000000 for 9000
+ 4018 strings out of 480224
+ 64990 string characters out of 2880578
+ 348277 words of memory out of 3000000
+ 20553 multiletter control sequences out of 15000+200000
+ 541420 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,5n,68p,509b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/user/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/us
-er/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on report.pdf (4 pages, 102965 bytes).
+ 60i,10n,68p,641b,329s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/user/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (8 pages, 122871 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
+ 52 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
