@@ -1,0 +1,13 @@
+\contentsline {section}{Assignment 1}{2}{}%
+\contentsline {subsection}{Feature engineering}{2}{}%
+\contentsline {subsubsection}{Missing values}{2}{}%
+\contentsline {subsubsection}{Date features}{3}{}%
+\contentsline {subsubsection}{Data quality issue}{3}{}%
+\contentsline {subsubsection}{Data binning}{3}{}%
+\contentsline {subsection}{Exploratory data analysis}{4}{}%
+\contentsline {subsection}{Model building}{4}{}%
+\contentsline {subsection}{Interpretation}{4}{}%
+\contentsline {subsection}{Reflection}{4}{}%
+\contentsline {section}{Assignment 2}{4}{}%
+\contentsline {section}{Assignment 3}{4}{}%
+\contentsline {section}{Assignment 4}{4}{}%
