@@ -1,0 +1,12 @@
+list_optimizer = ['adam','adamax','nadam','rmsprop','SGD']
+best so far : SGD and rmsprop
+list_loss ['kldivergence','binary_crossentropy','categorical_crossentropy','poisson', 'sparse_categorical_crossentropy']
+
+activation_function ['sigmoid','relu']
+preference to sigmoid because it doesn't need to add to 1
+
+the learning rate can tweaked as well
+
+Regularization of L1 or L2.
+
+And of course; The amount of neurons
