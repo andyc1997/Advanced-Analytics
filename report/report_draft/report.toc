@@ -1,22 +1,23 @@
-\contentsline {section}{Assignment 1}{2}{}%
-\contentsline {subsection}{Feature engineering}{2}{}%
-\contentsline {subsubsection}{Missing values}{2}{}%
-\contentsline {subsubsection}{Date features}{3}{}%
-\contentsline {subsubsection}{Data quality issue}{3}{}%
-\contentsline {subsubsection}{Data binning}{4}{}%
-\contentsline {subsection}{Exploratory data analysis}{5}{}%
-\contentsline {subsubsection}{Class imbalance problem}{6}{}%
-\contentsline {subsubsection}{Univariate analysis}{6}{}%
-\contentsline {subsubsection}{Multivariate analysis}{11}{}%
-\contentsline {subsubsection}{Unsupervised learning}{11}{}%
-\contentsline {subsection}{Model building}{11}{}%
-\contentsline {subsubsection}{Algorithms}{11}{}%
-\contentsline {subsubsection}{Probability Calibration}{11}{}%
-\contentsline {subsubsection}{Metrics and Grid Search}{11}{}%
-\contentsline {subsubsection}{Data pipeline}{11}{}%
-\contentsline {subsubsection}{Model Comparison}{11}{}%
-\contentsline {subsection}{Interpretation}{11}{}%
-\contentsline {subsection}{Reflection}{11}{}%
-\contentsline {section}{Assignment 2}{13}{}%
-\contentsline {section}{Assignment 3}{14}{}%
-\contentsline {section}{Assignment 4}{15}{}%
+\contentsline {section}{Assignment 1}{2}{section*.2}%
+\contentsline {subsection}{Feature engineering}{2}{section*.3}%
+\contentsline {subsubsection}{Missing values}{2}{section*.4}%
+\contentsline {subsubsection}{Date features}{3}{section*.7}%
+\contentsline {subsubsection}{Data quality issue}{3}{section*.9}%
+\contentsline {subsubsection}{Data binning}{4}{section*.11}%
+\contentsline {subsection}{Exploratory data analysis}{7}{section*.15}%
+\contentsline {subsubsection}{Class imbalance problem}{7}{section*.16}%
+\contentsline {subsubsection}{Descriptive statistics}{7}{section*.18}%
+\contentsline {subsubsection}{Correlation plot}{14}{section*.29}%
+\contentsline {subsubsection}{Dimension reduction}{14}{section*.30}%
+\contentsline {subsubsection}{Outlier detection}{18}{section*.34}%
+\contentsline {subsection}{Model building}{19}{section*.36}%
+\contentsline {subsubsection}{Algorithms}{19}{section*.37}%
+\contentsline {subsubsection}{Metrics and Grid Search}{20}{section*.38}%
+\contentsline {subsubsection}{Probability Calibration}{20}{section*.39}%
+\contentsline {subsubsection}{Data pipeline}{20}{section*.40}%
+\contentsline {subsubsection}{Model Comparison}{20}{section*.41}%
+\contentsline {subsection}{Interpretation}{20}{section*.42}%
+\contentsline {subsection}{Reflection}{20}{section*.43}%
+\contentsline {section}{Assignment 2}{21}{section*.44}%
+\contentsline {section}{Assignment 3}{22}{section*.45}%
+\contentsline {section}{Assignment 4}{23}{section*.46}%
