@@ -139,34 +139,33 @@ data = transform(data)
 X, y = data.drop(['claim_id', 'fraud'], axis = 1), data['fraud'].apply(lambda x: 1 if x == 'Y' else 0)
 
 #%%
-# Umap for continuous features with euclidean distance metrics
+# Imputation, scaling and smote
 cont_feature = X.columns[X.dtypes != np.dtype('O')]
 cont_feature = cont_feature[~cont_feature.str.endswith('_id_known')]
 
 pipeline = Pipeline([('impute', SimpleImputer(strategy = 'median')),
-                     ('scaler', StandardScaler()),
-                     ('upsampling', SMOTE(random_state = 999))])
-X_cont_resample, y_resample = pipeline.fit_resample(X[cont_feature], y)
+                     ('scaler', StandardScaler())])
+X_cont = pipeline.fit_transform(X[cont_feature])
 
+X[cont_feature] = X_cont
+X = pd.get_dummies(X, drop_first = True)
+
+X_resample, y_resample = SMOTE(random_state = 999).fit_resample(X, y)
 
 #%%
-# Umap for binary features with jaccard distance metrics
-pipeline = Pipeline([('upsampling', SMOTE(random_state = 999))])
-X_cat_resample, y_resample2 = pipeline.fit_resample(pd.get_dummies(X.drop(cont_feature, axis = 1), 
-                              drop_first = True), y)
+X_cont_resample = X_resample[cont_feature].drop('claim_amount', axis = 1)
+X_cat_resample = X_resample.drop(cont_feature, axis = 1)
 
 #%%
 # Fit umap objects
 fit_cont = umap.UMAP(metric = 'euclidean', n_neighbors = 30, n_components = 3).fit(X_cont_resample, y_resample)
-fit_cat = umap.UMAP(metric = 'jaccard', n_neighbors = 30, n_components = 3).fit(X_cat_resample, y_resample)
+fit_cat = umap.UMAP(metric = 'hamming', n_neighbors = 30, n_components = 3).fit(X_cat_resample, y_resample)
 
 #%%
 # Get lower dimensional representation
 umap_embedded_cont = fit_cont.transform(X_cont_resample)
 umap_embedded_cat = fit_cat.transform(X_cat_resample)
 
-#%%
-claim_amount_smote, y_resample3 = SMOTE(random_state = 999).fit_resample(data[['claim_amount']], y)
 
 #%%
 # Plot 2d
@@ -185,14 +184,24 @@ def umap_plot_embedded(umap_obj, feature_type):
 fig_cat = umap_plot_embedded(umap_embedded_cat, 'categorical')
 fig_cont = umap_plot_embedded(umap_embedded_cont, 'continuous')
 
+
 #%% 
 #Plot 3d
 def umap_plot_embedded(umap_obj, feature_type):
     fig = matplotlib.pyplot.figure()
     ax = Axes3D(fig)
-    ax.view_init(340, 90)
-    colors = claim_amount_smote
-    plt3d = ax.scatter(*umap_obj.T, s = 0.1, 
+    colors = ['blue', 'red']
+    ax.scatter(*umap_obj.T, s = 0.1, c = y_resample,
+                cmap = matplotlib.colors.ListedColormap(colors), alpha = 1.0)
+    plt.title('UMAP for ' + feature_type + ' data with n_neighbors = 30')
+    return fig
+
+def umap_plot_embedded_color(umap_obj, feature_type):
+    fig = matplotlib.pyplot.figure()
+    ax = Axes3D(fig)
+    #ax.view_init(340, 90)
+    colors = X_resample['claim_amount']
+    plt3d = ax.scatter(*umap_obj.T, s = 0.001 * X_resample['claim_amount'], 
                c = colors, cmap = 'cool',
                alpha = 1.0)
     #plt.setp(ax, xticks=[], yticks=[])
@@ -200,8 +209,11 @@ def umap_plot_embedded(umap_obj, feature_type):
     fig.colorbar(plt3d, ax = ax)
     return fig
 
-fig_cat = umap_plot_embedded(umap_embedded_cat, 'categorical')
-fig_cont = umap_plot_embedded(umap_embedded_cont, 'continuous')
+# fig_cat = umap_plot_embedded(umap_embedded_cat, 'categorical')
+# fig_cont = umap_plot_embedded(umap_embedded_cont, 'continuous')
+
+fig_cat = umap_plot_embedded_color(umap_embedded_cat, 'categorical')
+fig_cont = umap_plot_embedded_color(umap_embedded_cont, 'continuous')
 
 #%% 
 # Sanity check
