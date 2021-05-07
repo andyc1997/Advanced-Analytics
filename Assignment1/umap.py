@@ -59,7 +59,6 @@ driver_postal_code_list = get_information_value(data, 'driver_postal_code')
 third_party_1_postal_code_list = get_information_value(data, 'third_party_1_postal_code')
 third_party_2_postal_code_list = get_information_value(data, 'third_party_2_postal_code')
 repair_postal_code_list = get_information_value(data, 'repair_postal_code')
-claim_vehicle_brand_list = get_information_value(data, 'claim_vehicle_brand')
 policy_coverage_type_list = get_information_value(data, 'policy_coverage_type')
 
 def handle_age(value):
@@ -69,16 +68,10 @@ def handle_age(value):
     else:
         if value <= 20:
             return '<=20'
-#        elif value <= 30:
-#            return '<=30'
         elif value <= 40:
             return '<=40'
-#        elif value <= 50:
-#            return '<=50'
         elif value <= 60:
             return '<=60'
- #       elif value <= 70:
- #           return '<=70'
         elif value <= 80:
             return '<=80'
         else:
@@ -125,7 +118,6 @@ def transform(x_dataset):
         x_dataset['third_party_2_postal_code'] = x_dataset['third_party_2_postal_code'].apply(lambda x: handle_categorical_grouping(x, third_party_2_postal_code_list))
         x_dataset['third_party_3_postal_code'] = x_dataset['third_party_3_postal_code'].apply(lambda x: x if x == 'unknown' else 'other')
         x_dataset['repair_postal_code'] = x_dataset['repair_postal_code'].apply(lambda x: handle_categorical_grouping(x, repair_postal_code_list))
-        # x_dataset['claim_vehicle_brand'] = x_dataset['claim_vehicle_brand'].apply(lambda x: handle_categorical_grouping(x, claim_vehicle_brand_list))
         x_dataset['policy_coverage_type'] = x_dataset['policy_coverage_type'].apply(lambda x: handle_categorical_grouping(x, policy_coverage_type_list))        
         
         return x_dataset.drop(['third_party_1_id_known', 'third_party_2_id_known', 'third_party_3_id_known'], axis = 1)
@@ -157,7 +149,7 @@ X_cont_resample = X_resample[cont_feature].drop('claim_amount', axis = 1)
 X_cat_resample = X_resample.drop(cont_feature, axis = 1)
 
 #%%
-# Fit umap objects
+# Fit umap objects - Experiment and change hyperparameters here. It takes some time to run.
 fit_cont = umap.UMAP(metric = 'euclidean', n_neighbors = 30, n_components = 3).fit(X_cont_resample, y_resample)
 fit_cat = umap.UMAP(metric = 'hamming', n_neighbors = 30, n_components = 3).fit(X_cat_resample, y_resample)
 
@@ -199,12 +191,10 @@ def umap_plot_embedded(umap_obj, feature_type):
 def umap_plot_embedded_color(umap_obj, feature_type):
     fig = matplotlib.pyplot.figure()
     ax = Axes3D(fig)
-    #ax.view_init(340, 90)
     colors = X_resample['claim_amount']
     plt3d = ax.scatter(*umap_obj.T, s = 0.001 * X_resample['claim_amount'], 
                c = colors, cmap = 'cool',
                alpha = 1.0)
-    #plt.setp(ax, xticks=[], yticks=[])
     plt.title('UMAP for ' + feature_type + ' data with n_neighbors = 30')
     fig.colorbar(plt3d, ax = ax)
     return fig
@@ -214,8 +204,3 @@ def umap_plot_embedded_color(umap_obj, feature_type):
 
 fig_cat = umap_plot_embedded_color(umap_embedded_cat, 'categorical')
 fig_cont = umap_plot_embedded_color(umap_embedded_cont, 'continuous')
-
-#%% 
-# Sanity check
-print(np.sum(y_resample3 != y_resample2))
-print(np.sum(y_resample != y_resample2))
