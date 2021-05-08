@@ -7,10 +7,10 @@ tag_italianfood, tag_italy_concept
 tag_pizza, tag_italy_concept
 tag_oats, tag_oat_concept
 tag_oatmeal, tag_oat_concept
-tag_vegan, tag_vegan_concept
-tag_veganfood, tag_vegan_concept
-tag_plantbased, tag_vegan_concept
-tag_veganrecipe, tag_vegan_concept
+tag_vegan, tag_vegetarian_concept
+tag_veganfood, tag_vegetarian_concept
+tag_plantbased, tag_vegetarian_concept
+tag_veganrecipe, tag_vegetarian_concept
 tag_pasta, tag_pasta_concept
 tag_pastalover, tag_pasta_concept
 tag_noodles, tag_pasta_concept
